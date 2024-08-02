@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuentra tu SuperHero </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+    integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC&family=Average&family=Kanit&display=swap"rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="backdrop_menu_lateral"></div>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+    id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <div class="contenedor_logo">
+        <img src="./assets/img/sh2.jpg" alt="Logo Super Heroes 2" />
+      </div>
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menú Lateral
+        <div class="separador_uno"></div>
+      </h5>
+    </div>
+    <div class="offcanvas-body">
+      <ul>
+        <li><a href="#seccion_inicio">Inicio</a></li>
+        <li><a href="#seccion_buscar">Buscar</a></li>
+        <li><a href="#seccion_datos">Datos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper_menu_hamburguesa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+    <div class="hamburger" id="hamburger-1">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </div>
+
+  <header id="seccion_inicio">
+    <h1 class="header_titulo">Encuentra tu Super Hero</h1>
+    <div class="header_logo">
+      <a href="./assets/img/sh1.jpg" data-title="Logo SuperHero" data-lightbox="Logo SuperHero"><img
+          src="./assets/img/sh1.jpg" alt="Logo SuperHero" /></a>
+    </div>
+  </header>
+  <main>
+    <section class="buscar_superhero" id="seccion_buscar">
+      <article>
+        <h3>
+          Ingresa nombre de Super Heroe a Buscar
+        </h3>
+        <form class="buscar_superhero_wrapper_input_group">
+          <div class="input-group mb-3">
+            <label class="input-group-text bg-success nombre_label_input" id="nombre_superhero "
+              for="input_nombre_superhero" title="Ingresa Nombre SuperHeroe">Nombre</label>
+            <input id="input_nombre_superhero" type="text" class="form-control" placeholder="Nombre SuperHero"
+              aria-label="Nombre SuperHero" aria-describedby="nombre_superhero" />
+          </div>
+          <button class="button_buscar_id btn btn-primary my-3" type="submit" title="Haz click aquí para buscar Id">
+            Buscar ID
+          </button>
+        </form>
+        <div class="buscar_superhero_resultado">
+          <h3>El ID resultado es:</h3>
+          <ul class="id_resultado">
+            <li style="margin-top: 7px">ID</li>
+          </ul>
+        </div>
+      </article>
+      <article class="buscar_superhero_id">
+        <h3>
+          Ingresa ID de Super Heroe a Buscar
+        </h3>
+        <form class="row mt-3 needs-validation mx-0" novalidate>
+          <div class="wrapper_buscar_id_input_group">
+            <div class="input-group">
+              <label class="input-group-text bg-success form-label mb-0" id="input_group_buscar_id"
+                for="buscar_id_input">ID</label>
+              <input type="text" id="buscar_id_input" class="form-control" placeholder="Ingresa ID"
+                aria-label="Ingresa ID" aria-describedby="input_group_buscar_id" required />
+            </div>
+            <p class="mensaje_input_buscar_id mb-3">
+              El Input No Puede estar Vacio
+            </p>
+            <button class="button_buscar_por_id btn btn-primary mb-3" type="submit" title="Haz click aquí para buscar ">
+              Buscar
+            </button>
+          </div>
+        </form>
+      </article>
+    </section>
+    <section class="show_superhero" id="seccion_datos">
+      <h3>
+        Datos del SuperHero
+        <div class="separador_uno"></div>
+      </h3>
+      <div class="show_superhero_contenedor_datos">
+        <div class="row mx-0 gy-3">
+          <div class="col col-12 col-lg-6">
+            <div class="contenedor_elemento">
+              <h3 class="pt-0">SuperHeroe Encontrado</h3>
+              <div class="contenedor_image_card">
+                <div class="wrapper_image_show">
+                  <img class="contenedor_image_card--img" src="" alt="Imagen Super Heroe" />
+                </div>
+                <div class="card contenedor_image_card--card">
+                  <div class="card-body">
+                    <ul class="card-text">
+                      <li>
+                        <span>Nombre:</span>
+                        <span class="contenedor_image_card--nombre">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Conexiones:</span>
+                        <span class="contenedor_image_card--conexiones">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Publicado por:</span>
+                        <span class="contenedor_image_card--publicado">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Ocupación:</span>
+                        <span class="contenedor_image_card--ocupacion">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Primera Aparición:</span>
+                        <span class="contenedor_image_card--aparicion">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Altura:</span>
+                        <span class="contenedor_image_card--altura">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Peso:</span>
+                        <span class="contenedor_image_card--peso">placeholder</span>
+                      </li>
+                      <li>
+                        <span>Alianzas:</span>
+                        <span class="contenedor_image_card--alianzas">placeholder</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-6">
+            <div class="contenedor_canvas" style="width: 100%; height: 400px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+ <footer>
+        <div class="loguito">
+          <a href="#seccion_inicio"><img src="./assets/img/sh2-sin_background.png" alt="logo superheroes" /></a>
+        </div>
+        <div class="contenedor_contenido">
+          <p class="contenedor_contenido_texto">
+            Desarrollado por Jhon Chiguay
+          </p>
+        </div>
+ </footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+ integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+ crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
+ integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
+ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script src="./assets/js/buscar_Nombre.js"></script>
+    <script src="./assets/js/buscar_ID.js"></script>
+
+</body>
+</html>
